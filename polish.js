@@ -1,4 +1,6 @@
 (function(){
+  var h=document.querySelector('header');
+  if(h){var t=function(){h.classList.toggle('solid',window.scrollY>40)};t();addEventListener('scroll',t,{passive:true});}
   var f=document.getElementById('contactForm');
   if(!f)return;
   f.addEventListener('submit',function(e){

@@ -77,29 +77,14 @@
         <span class="logo-text">STRANTECH</span>
         <span class="cage-badge">CAGE: 1W2E4</span>
       </a>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="capabilities.html">Capabilities</a>
-        <a href="partners.html" class="active">Partners</a>
-        <a href="about.html">About Us</a>
-        <a href="locations.html">Locations</a>
-        <a href="index.html#contact" class="btn btn-primary">Request a consultation</a>
-        <button class="theme-toggle" id="themeToggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
-      </nav>
+      <nav><a href="index.html">Home</a><a href="capabilities.html">Capabilities</a><a href="partners.html" class="active">Federal Contracting</a><a href="index.html#performance">Past Performance</a><a href="locations.html">Global Operations</a><a href="about.html">About</a><a href="index.html#contact">Contact</a><a href="index.html#contact" class="btn btn-primary btn-arrow">Request a consultation</a></nav>
       <div class="nav-actions">
         <button class="theme-toggle" id="themeToggleMobile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
         <button class="mobile-toggle" id="mobileToggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
       </div>
     </div>
   </header>
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="index.html" onclick="closeMobile()">Home</a>
-    <a href="capabilities.html" onclick="closeMobile()">Capabilities</a>
-    <a href="partners.html" onclick="closeMobile()">Partners</a>
-    <a href="about.html" onclick="closeMobile()">About Us</a>
-    <a href="locations.html" onclick="closeMobile()">Locations</a>
-    <a href="index.html#contact" class="btn btn-primary" style="margin-top:0.4rem;" onclick="closeMobile()">Request a consultation</a>
-  </div>
+  <div class="mobile-menu" id="mobileMenu"><a href="index.html">Home</a><a href="capabilities.html">Capabilities</a><a href="partners.html" class="active">Federal Contracting</a><a href="index.html#performance">Past Performance</a><a href="locations.html">Global Operations</a><a href="about.html">About</a><a href="index.html#contact">Contact</a><a href="index.html#contact" class="btn btn-primary btn-arrow">Request a consultation</a></div>
 
   <div class="page-banner" style="background-image:url(images/modular-scif-buildouts.jpg)" role="img" aria-label="Partners and contracts"><div><h1>Partners and contracts</h1><p>The vehicles and teammates behind our federal and commercial work.</p></div></div>
 <section>
@@ -184,5 +169,6 @@
     mobileToggle.addEventListener('click',()=>{mobileMenu.classList.toggle('open');mobileToggle.innerHTML = mobileMenu.classList.contains('open') ? ICON_CLOSE : ICON_MENU;});
     function closeMobile(){mobileMenu.classList.remove('open');mobileToggle.innerHTML = ICON_MENU;}
   </script>
+<script src="polish.js"></script>
 </body>
 </html>

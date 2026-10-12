@@ -28,3 +28,13 @@ footer{background:#030812;border-top:1px solid var(--border);color:#9fb0c9}foote
 .callbar{display:none}
 @media(max-width:700px){.callbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:90;background:#030812;border-top:1px solid var(--border);padding:.6rem;gap:.6rem}.callbar .btn{flex:1;padding:.8rem}body{padding-bottom:4.2rem}}
 @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+/* mockup-style header: transparent over imagery, solid after scroll, blue underline */
+header{position:fixed;top:0;left:0;right:0;z-index:100;background:linear-gradient(180deg,rgba(5,13,28,.72),rgba(5,13,28,0));border-bottom:1px solid rgba(255,255,255,.08);backdrop-filter:blur(3px);transition:background .25s}
+header.solid{background:rgba(5,13,28,.94);backdrop-filter:blur(12px);border-bottom-color:var(--border)}
+nav a.active{box-shadow:none}
+nav a:not(.btn){position:relative;padding:.5rem 0;color:#e8eef8}
+nav a:not(.btn)::after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:2px;background:#2f7de1;transform:scaleX(0);transition:transform .2s}
+nav a:not(.btn):hover::after,nav a.active::after{transform:scaleX(1)}
+nav a.btn{background:#1d5fc4;border:1px solid #5aa0ff;font-size:.72rem;padding:.75rem 1.3rem}
+nav a.btn:hover{background:#2f7de1}.btn-arrow::after{content:"→";margin-left:.7rem}
+.page-banner{margin-top:0;padding-top:64px;height:clamp(290px,36vw,390px)}

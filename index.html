@@ -17,7 +17,9 @@ nav{display:flex;align-items:center;gap:1.4rem}nav a{text-decoration:none;font-s
 .mobile-menu{display:none;position:fixed;top:58px;left:0;right:0;background:var(--bg);padding:1rem 1.5rem 1.5rem;z-index:99;flex-direction:column;border-bottom:1px solid var(--border)}
 .mobile-menu.open{display:flex}.mobile-menu a{color:#fff;text-decoration:none;padding:.7rem 0;border-bottom:1px solid var(--border)}.mobile-menu a.btn{border:0;margin-top:.8rem;text-align:center}
 .hero{position:relative;padding:9rem 0 7rem;background:var(--ink);overflow:hidden}
-.hero::before{content:"";position:absolute;inset:0 0 0 38%;background:url(images/high-density-cable-plant.jpg) center/cover;-webkit-mask-image:linear-gradient(90deg,transparent,#000 45%);mask-image:linear-gradient(90deg,transparent,#000 45%);opacity:.8}
+.hero::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(5,13,28,.96) 0,rgba(5,13,28,.8) 38%,rgba(5,13,28,.12) 78%)}
+.slide{position:absolute;inset:0;z-index:0;background-size:cover;background-position:center;opacity:0;transition:opacity 1.2s}.slide.on{opacity:1}.slide:first-child{background-position:right center}
+.dots{position:absolute;right:1.5rem;bottom:6.5rem;z-index:4;display:flex;gap:.5rem}.dots button{width:34px;height:5px;border:0;border-radius:3px;background:#ffffff55;cursor:pointer;padding:0}.dots button.on{background:#6ea8ff}
 .hero::after{content:"";position:absolute;inset:auto 0 0;height:140px;background:linear-gradient(transparent,var(--ink))}
 .hero .wrap{position:relative;z-index:2}.hero .in{max-width:640px}
 .kicker{font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:#c3cfe4;margin-bottom:1.2rem}
@@ -33,8 +35,8 @@ h1{font-size:clamp(2.5rem,5.4vw,4.3rem);line-height:1.04;font-weight:800;letter-
 .tile h3{font-size:1rem;line-height:1.25;margin-bottom:.4rem}.tile p{font-size:.84rem;color:#c3cfe4;line-height:1.45}
 .stats{padding:3rem 0;border-block:1px solid var(--border);margin-top:3rem}.stats .wrap{display:grid;grid-template-columns:repeat(5,1fr);gap:1.5rem}
 .stat b{display:block;font:800 2.2rem/1 'Archivo';color:#fff}.stat span{font-size:.88rem;color:var(--muted)}
-.fed{position:relative;overflow:hidden}.fed::before{content:"";position:absolute;inset:0 0 0 45%;background:url(images/secure-facilities.jpg) center/cover;opacity:.35;-webkit-mask-image:linear-gradient(90deg,transparent,#000 40%);mask-image:linear-gradient(90deg,transparent,#000 40%)}
-.fed .wrap{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:3.5rem}
+.fed{position:relative;overflow:hidden}.fed::before{content:"";position:absolute;inset:0 0 0 45%;background:url(images/aircraft-sunset.jpg) center/cover;opacity:.9;-webkit-mask-image:linear-gradient(90deg,transparent,#000 40%);mask-image:linear-gradient(90deg,transparent,#000 40%)}
+.fed{padding:6rem 0}.fed .wrap{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:3.5rem}
 h2{font-size:clamp(1.8rem,3.4vw,2.7rem);line-height:1.1;max-width:20ch}.lead{color:var(--muted);max-width:60ch;margin-top:1rem;font-size:1.03rem}
 .facts{list-style:none;display:grid;gap:.9rem;border-left:1px solid var(--border);padding-left:2rem}.facts li{font-size:.95rem;color:var(--muted)}.facts b{display:block;color:#fff;font-family:'Archivo'}
 .split{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:center}.split img{border-radius:8px;width:100%}
@@ -53,17 +55,23 @@ label{font-size:.82rem;font-weight:600;display:grid;gap:.35rem;color:#c3cfe4}inp
 form .btn{border:0;cursor:pointer;padding:1.05rem}#formStatus{font-size:.9rem;min-height:1.2em;color:var(--muted)}
 footer{padding:2.5rem 1.5rem;text-align:center;font-size:.85rem}
 @media(max-width:1080px){.tiles .wrap{grid-template-columns:repeat(3,1fr)}.stats .wrap{grid-template-columns:repeat(3,1fr)}}
-@media(max-width:980px){nav{display:none}.mobile-toggle{display:block}.fed .wrap,.split,.about,.contact .wrap{grid-template-columns:1fr}.hero::before{inset:0;opacity:.35;-webkit-mask-image:none;mask-image:none}.facts{border:0;padding:0}.fed::before{opacity:.15}}
+@media(max-width:980px){nav{display:none}.mobile-toggle{display:block}.fed .wrap,.split,.about,.contact .wrap{grid-template-columns:1fr}.hero::before{background:linear-gradient(180deg,rgba(5,13,28,.85),rgba(5,13,28,.7))}.dots{right:auto;left:1.5rem}.facts{border:0;padding:0}.fed::before{opacity:.3}}
 @media(max-width:640px){section{padding:3.6rem 0}.hero{padding:7rem 0 6rem}.tiles .wrap,.stats .wrap{grid-template-columns:1fr 1fr}.r2{grid-template-columns:1fr}.strip{grid-template-columns:1fr;grid-template-rows:none}.strip figure,.strip figure:first-child{grid-row:auto;height:210px}.cage-badge{display:none}}
 </style></head>
 <body>
 <header><div class="nav-container">
 <a href="index.html" class="logo-group"><img src="images/strantech-logo-light.png" alt=""><span class="logo-text">STRANTECH</span><span class="cage-badge">CAGE 1W2E4</span></a>
-<nav><a href="capabilities.html">Capabilities</a><a href="partners.html">Federal Contracting</a><a href="#performance">Past Performance</a><a href="locations.html">Global Operations</a><a href="about.html">About</a><a href="#contact">Contact</a><a href="#contact" class="btn btn-primary">Request a consultation</a></nav>
+<nav><a href="index.html" class="active">Home</a><a href="capabilities.html">Capabilities</a><a href="partners.html">Federal Contracting</a><a href="#performance">Past Performance</a><a href="locations.html">Global Operations</a><a href="about.html">About</a><a href="#contact">Contact</a><a href="#contact" class="btn btn-primary btn-arrow">Request a consultation</a></nav>
 <button class="mobile-toggle" id="menuBtn" aria-label="Menu">☰</button></div></header>
-<div class="mobile-menu" id="menu"><a href="capabilities.html">Capabilities</a><a href="partners.html">Federal Contracting</a><a href="#performance">Past Performance</a><a href="locations.html">Global Operations</a><a href="about.html">About</a><a href="#contact">Contact</a><a href="#contact" class="btn btn-primary">Request a consultation</a></div>
+<div class="mobile-menu" id="menu"><a href="index.html" class="active">Home</a><a href="capabilities.html">Capabilities</a><a href="partners.html">Federal Contracting</a><a href="#performance">Past Performance</a><a href="locations.html">Global Operations</a><a href="about.html">About</a><a href="#contact">Contact</a><a href="#contact" class="btn btn-primary btn-arrow">Request a consultation</a></div>
 
-<section class="hero"><div class="wrap"><div class="in">
+<section class="hero">
+<div class="slide on" style="background-image:url(images/hero-radar-site.jpg)"></div>
+<div class="slide" style="background-image:url(images/modular-scif-buildouts.jpg)"></div>
+<div class="slide" style="background-image:url(images/data-center-infrastructure.jpg)"></div>
+<div class="slide" style="background-image:url(images/high-density-cable-plant.jpg)"></div>
+<div class="dots" role="tablist" aria-label="Hero slides"></div>
+<div class="wrap"><div class="in">
 <div class="kicker">Mission-critical infrastructure. Anywhere in the world.</div>
 <h1>Secure infrastructure,<span>built and kept running.</span></h1>
 <p>STRANTECH delivers engineering, construction, power, telecommunications and mission-critical technology infrastructure for U.S. federal agencies, defense organizations and commercial customers worldwide.</p>
@@ -137,5 +145,9 @@ footer{padding:2.5rem 1.5rem;text-align:center;font-size:.85rem}
 <footer><p>© 2026 STRANTECH LLC. Strengthening mission-critical networks. Safeguarding innovation.</p><p style="margin-top:.4rem">Reston, VA · <a href="tel:+18883081810">888.308.1810</a> · <a href="https://www.strantech.com">strantech.com</a></p></footer>
 <div class="callbar"><a class="btn btn-outline" href="tel:+18883081810">Call</a><a class="btn btn-primary" href="#contact">Request a consultation</a></div>
 <script src="polish.js"></script>
-<script>var m=document.getElementById('menu');document.getElementById('menuBtn').onclick=function(){m.classList.toggle('open')};m.onclick=function(){m.classList.remove('open')};</script>
+<script>(function(){var sl=document.querySelectorAll('.slide'),d=document.querySelector('.dots'),i=0,t;
+sl.forEach(function(_,n){var b=document.createElement('button');b.setAttribute('aria-label','Show slide '+(n+1));b.onclick=function(){go(n);start()};d.appendChild(b)});
+function go(n){i=n;sl.forEach(function(x,k){x.classList.toggle('on',k===n)});d.childNodes.forEach(function(x,k){x.classList.toggle('on',k===n)})}
+function start(){clearInterval(t);if(!matchMedia('(prefers-reduced-motion:reduce)').matches)t=setInterval(function(){go((i+1)%sl.length)},6500)}
+go(0);start()})();var m=document.getElementById('menu');document.getElementById('menuBtn').onclick=function(){m.classList.toggle('open')};m.onclick=function(){m.classList.remove('open')};</script>
 </body></html>
