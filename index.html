@@ -20,7 +20,7 @@ nav{display:flex;align-items:center;gap:1.4rem}nav a{text-decoration:none;font-s
 .hero{position:relative;padding:9rem 0 7rem;background:var(--ink);overflow:hidden}
 .hero::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(5,13,28,.96) 0,rgba(5,13,28,.8) 38%,rgba(5,13,28,.12) 78%)}
 .slide{position:absolute;inset:0;z-index:0;background-size:cover;background-position:center;opacity:0;transition:opacity 1.2s}.slide.on{opacity:1}.slide:first-child{background-position:right center}
-.dots{position:absolute;right:1.5rem;bottom:6.5rem;z-index:4;display:flex;gap:.5rem}.dots button{width:34px;height:5px;border:0;border-radius:3px;background:#ffffff55;cursor:pointer;padding:0}.dots button.on{background:#6ea8ff}
+.dots{display:none;position:absolute;right:1.5rem;bottom:6.5rem;z-index:4;gap:.5rem}.dots button{width:34px;height:5px;border:0;border-radius:3px;background:#ffffff55;cursor:pointer;padding:0}.dots button.on{background:#6ea8ff}
 .hero::after{content:"";position:absolute;inset:auto 0 0;height:140px;background:linear-gradient(transparent,var(--ink))}
 .hero .wrap{position:relative;z-index:2}.hero .in{max-width:640px}
 .kicker{font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:#c3cfe4;margin-bottom:1.2rem}
@@ -68,10 +68,6 @@ footer{padding:2.5rem 1.5rem;text-align:center;font-size:.85rem}
 
 <section class="hero">
 <div class="slide on" style="background-image:url(images/hero-radar-site.jpg)"></div>
-<div class="slide" style="background-image:url(images/modular-scif-buildouts.jpg)"></div>
-<div class="slide" style="background-image:url(images/data-center-infrastructure.jpg)"></div>
-<div class="slide" style="background-image:url(images/high-density-cable-plant.jpg)"></div>
-<div class="dots" role="tablist" aria-label="Hero slides"></div>
 <div class="wrap"><div class="in">
 <div class="kicker">Mission-critical infrastructure. Anywhere in the world.</div>
 <h1>Secure infrastructure,<span>built and kept running.</span></h1>
@@ -146,9 +142,5 @@ footer{padding:2.5rem 1.5rem;text-align:center;font-size:.85rem}
 <footer><p>© 2026 STRANTECH LLC. Strengthening mission-critical networks. Safeguarding innovation.</p><p style="margin-top:.4rem">Reston, VA · <a href="tel:+18883081810">888.308.1810</a> · <a href="https://www.strantech.com">strantech.com</a></p></footer>
 <div class="callbar"><a class="btn btn-outline" href="tel:+18883081810">Call</a><a class="btn btn-primary" href="#contact">Request a consultation</a></div>
 <script src="polish.js"></script>
-<script>(function(){var sl=document.querySelectorAll('.slide'),d=document.querySelector('.dots'),i=0,t;
-sl.forEach(function(_,n){var b=document.createElement('button');b.setAttribute('aria-label','Show slide '+(n+1));b.onclick=function(){go(n);start()};d.appendChild(b)});
-function go(n){i=n;sl.forEach(function(x,k){x.classList.toggle('on',k===n)});d.childNodes.forEach(function(x,k){x.classList.toggle('on',k===n)})}
-function start(){clearInterval(t);if(!matchMedia('(prefers-reduced-motion:reduce)').matches)t=setInterval(function(){go((i+1)%sl.length)},6500)}
-go(0);start()})();var m=document.getElementById('menu');document.getElementById('menuBtn').onclick=function(){m.classList.toggle('open')};m.onclick=function(){m.classList.remove('open')};</script>
+<script>var m=document.getElementById('menu');document.getElementById('menuBtn').onclick=function(){m.classList.toggle('open')};m.onclick=function(){m.classList.remove('open')};</script>
 </body></html>
