@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>STRANTECH | Capabilities</title>
+  <meta name="description" content="STRANTECH capabilities: data center construction, high-density cable plant, Vertiv UPS & power systems, secure facilities, OSP/ISP, and full lifecycle sustainment." />
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAAA6CAIAAACPssguAAAKu0lEQVR42u1aaWwd1RU+5947y5u3+nl37DiGOCFxErKBMIGqNGpRKVVpRQqtCrQUqf0BVYEuEq34QVRQJUR/AD8rWvKnqIG0VYuA0hJCAy4QEkgM2RcnDo73Z79tZu69pz/u85LVz44dgZrR++E3fjNzvnO+c8853x0kIvg8Hww+58fnHoD4rBmk9WmcZgiIeIHf4+c9B+YkAkRAxjEEiIB4YSdOHEGo3t3VU/QlQwDEUOq21srG+jgRnO8OsxaBktEEnOOMLidEHMwU77j/bz39OUtwxiAzGmx8aN2dty5Ris53WzFbrOVsws8jo373qeyx7pGTp7L9Q4WuT0eWL6r60XdXXsCRJXciRCKW51mW4AwhVGQJNocU0kQIwBgCQNGXnfv7d+w5tWd//6Gu4aFMseDLUGrGMFcIHYuPu3k8YmcEcHIYDQOJYEp+iIshjDF97+HBV7cd2f5+99HuTKEoGWO2zQRnXsRCBMaQM3RscbazT/+KAMA5KkVSaURkCFLpKRkuZma9Sc1PDg5s2tL55rsnRrKBbXPHZsm4AwAEMOZnIJr0dVLoikV5dg7k82HUs5K+LThHBASwLT7LAMyTQql//8JHm/7aOZoNo56VjNsAAAhEoBSFUkmpNQEAcIajuaDgh+OmM8TunuzPnnhDKcJJIVBKp+LOxp+ui8cds3xpooqEayIzOwCIABFHs8GvnnrrX293xWN2Im4bH/uB8gMpOIt5VmNdsq4qWpWOVCTdeNRmiAsXpAxtaGy5PHIiIyWNEwkRQ6lqK6MNtbFE3JmTOmAW9qKvHnly2xsdxyuSDmkggnxBEun5DYlrV9SvWV635Mp0TaXnRawzLleKEEEDmcLg2IKz0wBwhrbFg1CZPDZopyrE0wIAxBD/+FLnvzuOp5OuJgqlDkK1amnNhq8uuuGapkTMHv+xVBoIGEc29nxDAzaeHURnJKgmMvw0JpscmLUIGO5+2pv788v7Yp5FAPlCWFkR+fF3rr7tK62CM2M0aRAWQ4DxMwOZYk9v9mRv9lR/rm+wMDRSzOXDweGi1oQ4CwVUTIM/CP95/0TvQD6VcEeyfltr5caHbriiKQUAUmrGUHAGHJTSh49nPtrb27l/4FDX8Mne7Gg28EMtpSIAhoiInKNjl5YXBEOU0meuAJg7Hzg6hAj5YtjWWvn0o+vTFRGzZgvBAOBw1/Dr249t/6D70LGh0VyoiSzBhWCCY9QSDC1ALGUSgdIEQESgCYgIAaQipWjOACAAQDYXSEV1le5vHr4hXRFRShuq7Ds8uGlL57b3jg9lAiGY6/BEzEGGpElpkkpLX0mliUr+ZoicIePIGQrOBOdcMFfxWNSabhDKphAAAriOKPryh3esWNCYkkoLxrSm5zbveW7z7pFs4EWsVMIBBKV0viiDUCKia/NUwqmp9KrT0ep0pCodSaciqbgd82wvYjkOtzjjgplWSnBMJdyz6/Ss5UBF0r2iMfn19VdoIkSUWj/+bMcLL++NR51E3AEgP5AFX7k2b2lMtC2qamutWtxSUV8TSyWcKWvqpZgHFjanbmqfH3EtqbTg7A+bO1/4x96KlEsEUul8IWyojt7UPn99e/PS1sozSgERaTotoyaaDpw4idPkULkATC1fs6yuvjpKBIKz/qHCn/6+N+pZQBiESnC89/Zld966pK46OrnNxhIfEBHP2RBM2WPPUgQQAaCmyqup8rQm08n1Dua8iOUHMhV3H3twXfuqBmO3sdf0qhdoB0/2ZpMxJ+pZF4Nh5qpErhBqDUQgOG58cF37qgbT/TKGjOGUgwsA2Bb/w4t7RnPB2ePBpQDQ0piMR63RbLC+vfm6VQ1mSS2fwVpTVUVEa3r82Q5EmPFkOxMAjCERtC6oWLmkpuDLtcvriGAGJCCAa6+u3/LPA69uO8IYak2XLgKGKvd+e4VtcQIAnOFdtNacs+c27y4UpfHLJQLAGGqiVUtr7tuwfMfuHpx+AEzj+d7uHsHx8PHMjj095uSlywFE1EQ/+f6apvrE0e4RhuX6z0xtnLP9R4b+8trBqGcVfXXw6NDMUvkiAJgphOMPNizjWCrVF7Zba1KaEIFz/PjAwC9/+2Ym63POEKFU9eauGz0fBgKwLd7UkDhnjsKkoYWNCUfDI/6Lr+x7fktnNi8jjpBSx6L2mmV1ZoDed3jQtlhLU8pMIHMCYNwoIx7qSWAmnIjASqpi6Srfl/uPDr/xTtfr248e7c5EXMt1OCJmRov3fKvtyuaUVCQ4bu3oirhWS1MKqKyAiJmxf/Iscr5DKRrMFHr68oe6hvbs6+880H/keCZXCF1HJGKOkSGGs8Uvr2t+4O41RMQQiGBrx/H58xJzSCEi6B/KB4EiAKVISh2EKghVvihz+XA0FwwOF/qHiqf6sn2DhYHhwsBwseBLIDBzQirpQqnzCxyb33v78vvvXu3Y3HSHWzu6du3tSyUcAECGswzAdCyhVI88+da+w4OOzaUipbRUWkqtNCmllSLAkpTAOROcCcGSMQcZEIGUOl8Ig1DFPXt9+/zv3da2elmtGZ0FZ4PDhaef/4AxDKUuP5+nTyGC0VyQGQ08V2giw3MhmABkbMxrCABAGgyqoq9DqREgFrUWtaSvX9Ww/vrmpa2VpqHQRIKzfFE++rvtR06MODaPRET5XaqYwdIjOAqBnCPShH6IQIWiVIo0EWkiAiHQtUU8atdWegubK5YsTK9YUtPaXGFZzMgcWhEXTAD29OUee/rt7Tu6UwlncNi/qiV9hhI8+9ro+GciZYlamytqqrx41E4n3ap0pDrt1VdHG2pjlamImKSSm2gIwZhAAHjtraPPbPrg2MnReMwOQh3zrJvam8uvCTOh0DnXJRmqh++75poVdedcdo3OZWAYyT+XD9/ZefKlV/Z37PqUcYx5FgKOZP07vrZ4aWsllVcEygVAY1rIWGRL8g5OAsAQNRERaK0R0Wx5jP9XcASAQlH2DeYPHht6/6Oe/37Yc+TEsNZQUuERh0eLK5dUP3DPappOeyjKX/iNvY7NQ6mLgTTq8fgP/ECWxDZEo+7v7Dz14Se9AJjJ+sMjfv9gvncgf6o/n8n6Umnb4hHHAgQEUBoyueLattonfvGFioQ7rQFtagBFX/YN5JGhUXWk0rWV0SDQtsVpMoBQeq5lXKeJOOLr2489s2lnOuVKRaZd5ZxZFvMi1nghVIryxdCxxF3fWPrAPWu8iNBlk2dqAFoTY7jr496fP7HVcQUQaE2uzZ/69Zea5yUmi5umj3AcYXoepQkAHEck4048Zusz9DYErSkIte/LaMT64rVNd32zbe3yutKYMeuqhJQ0kgtdRQCkNEkpXEdEXFFmwuPYxofWJJUOpZZSu45oqo1dt7rh5htbVi6tGdtuQ5z+WCfKSAAQvJSFphNWJlnP8tYZTw9Clc0FgmMoNWfoRayqVGRBY3LZoqrVbbXLr6qOeZYBSZoYm6EsUQaAUlrixN9j4v15N58BAKC5IXHzjQsWzEtUpb15tbHGunhjfaIi6UymaKnNZjMXhsqgkKZcPtSaCEgpIiJNesqBEwA23LJ4wy2Lz9GlapPTyNgsbBBcaKfeLGcDQ4WdH/dyxkwl4AzXrqiLRqxy2vWJdw4mIjnL2uj/wcsexotnM+QzcuDlV84uA7gM4DKAywAu5vgfaneUEchr2jcAAAAASUVORK5CYII=" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root { --navy:#0a1628; --blue:#0055a5; --blue-bright:#0070c9; --cyan:#00a3e0; --purple:#6b2d8b; --orange:#e85d04; --text:#1a1a1a; --muted:#5a6577; --bg:#fff; --bg-alt:#f4f6f9; --card:#fff; --border:#e2e8f0; --header-bg:rgba(255,255,255,0.97); }
+    [data-theme="dark"] { --text:#f0f4f8; --muted:#94a3b8; --bg:#0a0f1a; --bg-alt:#111827; --card:#1a2332; --border:#2d3748; --header-bg:rgba(10,15,26,0.95); }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:Inter,system-ui,sans-serif; background:var(--bg); color:var(--text); line-height:1.65; }
+    .accent-line { height:3px; width:80px; background:linear-gradient(90deg,var(--purple),var(--orange)); border-radius:2px; margin:1rem 0 1.5rem; }
+    header { position:fixed; top:0; left:0; right:0; z-index:100; background:var(--header-bg); backdrop-filter:blur(12px); border-bottom:1px solid var(--border); }
+    .nav-container { max-width:1200px; margin:0 auto; padding:0.75rem 1.25rem; display:flex; align-items:center; justify-content:space-between; gap:1rem; }
+    .logo-group { display:flex; align-items:center; gap:0.6rem; text-decoration:none; }
+    .logo-group img { height:36px; }
+    .logo-text { font-weight:800; font-size:1.2rem; color:var(--text); }
+    .cage-badge { font-size:0.62rem; font-weight:600; background:rgba(0,85,165,0.08); color:var(--blue); padding:0.15rem 0.4rem; border-radius:3px; border:1px solid rgba(0,85,165,0.2); }
+    nav { display:flex; align-items:center; gap:1.2rem; }
+    nav a { color:var(--muted); text-decoration:none; font-size:0.85rem; font-weight:500; }
+    nav a:hover, nav a.active { color:var(--blue); }
+    .btn { display:inline-flex; padding:0.55rem 1.1rem; border-radius:4px; font-weight:600; font-size:0.85rem; text-decoration:none; }
+    .btn-primary { background:var(--blue); color:#fff; }
+    .theme-toggle, .mobile-toggle { background:none; border:1px solid var(--border); color:var(--text); width:40px; height:40px; border-radius:4px; cursor:pointer; font-size:1.1rem; display:flex; align-items:center; justify-content:center; }
+    .mobile-toggle { display:none; }
+    #themeToggleMobile { display:none; }
+    @media (max-width:980px) {
+      nav { display:none; }
+      .mobile-toggle, #themeToggleMobile { display:flex; }
+      #themeToggle { display:none; }
+      .nav-container { padding-right:1rem; }
+    }
+    .mobile-menu { display:none; position:fixed; top:58px; left:0; right:0; background:var(--header-bg); border-bottom:1px solid var(--border); padding:1rem 1.25rem 1.4rem; z-index:99; flex-direction:column; gap:0.5rem; }
+    .mobile-menu.open { display:flex; }
+    .mobile-menu a { color:var(--text); text-decoration:none; font-weight:500; padding:0.5rem 0; border-bottom:1px solid var(--border); }
+    section { padding:6.5rem 1.25rem 3.5rem; }
+    .container { max-width:1100px; margin:0 auto; }
+    .section-label { font-size:0.72rem; font-weight:600; letter-spacing:0.12em; text-transform:uppercase; color:var(--blue); margin-bottom:0.4rem; }
+    h1 { font-size:clamp(1.7rem,3.2vw,2.3rem); font-weight:700; }
+    h2 { font-size:1.25rem; font-weight:700; }
+    .lead { font-size:1rem; color:var(--muted); max-width:700px; }
+    /* Half-and-half slideshow */
+    .slideshow {
+      position:relative; width:100%; border-radius:10px; overflow:hidden;
+      background:#0d1117; margin:2rem 0 2.5rem; min-height:340px;
+      box-shadow:0 10px 32px rgba(0,0,0,0.18);
+    }
+    .slide {
+      position:absolute; inset:0; opacity:0; transition:opacity 0.6s ease;
+      display:grid; grid-template-columns:1fr 1fr; background:#0d1117;
+    }
+    .slide.active { opacity:1; z-index:2; }
+    .slide-img-wrap {
+      display:flex; align-items:center; justify-content:center; background:#0d1117; padding:1rem;
+    }
+    .slide-img-wrap img { max-width:100%; max-height:320px; width:auto; height:auto; object-fit:contain; }
+    .slide-text {
+      display:flex; flex-direction:column; justify-content:center; padding:1.75rem 1.5rem;
+      background:linear-gradient(135deg,#0a1628,#132337); color:#fff;
+    }
+    .slide-text h3 { font-size:1.2rem; margin-bottom:0.6rem; color:#67e8f9; }
+    .slide-text p { font-size:0.9rem; color:rgba(255,255,255,0.75); line-height:1.55; }
+    .slide-arrow {
+      position:absolute; top:50%; transform:translateY(-50%); z-index:5;
+      background:rgba(255,255,255,0.92); border:none; width:40px; height:40px;
+      border-radius:50%; font-size:1.3rem; cursor:pointer; color:#0a1628;
+      display:flex; align-items:center; justify-content:center;
+      box-shadow:0 4px 12px rgba(0,0,0,0.25);
+    }
+    .slide-arrow.prev { left:0.75rem; }
+    .slide-arrow.next { right:0.75rem; }
+    .slide-nav { position:absolute; bottom:0.75rem; left:50%; transform:translateX(-50%); z-index:5; display:flex; gap:0.35rem; }
+    .slide-dot { width:9px; height:9px; border-radius:50%; background:rgba(255,255,255,0.35); border:none; cursor:pointer; padding:0; }
+    .slide-dot.active { background:#fff; }
+    @media (max-width:700px) {
+      .slide { grid-template-columns:1fr; }
+      .slide-img-wrap { min-height:180px; }
+      .slide-img-wrap img { max-height:200px; }
+      .slideshow { min-height:420px; }
+    }
+    .cap-detail { background:var(--card); border:1px solid var(--border); border-radius:8px; padding:1.5rem; margin-bottom:1.25rem; }
+    .cap-detail h2 { color:var(--blue); font-size:1.15rem; margin-bottom:0.4rem; }
+    [data-theme="dark"] .cap-detail h2 { color:var(--cyan); }
+    .cap-detail ul { list-style:none; margin-top:0.6rem; display:grid; grid-template-columns:1fr 1fr; gap:0.3rem 1.2rem; }
+    .cap-detail li { font-size:0.88rem; color:var(--muted); padding-left:1rem; position:relative; }
+    .cap-detail li::before { content:"✓"; position:absolute; left:0; color:var(--blue); font-weight:700; }
+    @media (max-width:600px) { .cap-detail ul { grid-template-columns:1fr; } }
+    footer { background:var(--navy); color:rgba(255,255,255,0.7); padding:2.2rem 1.25rem; text-align:center; font-size:0.85rem; }
+    footer .logo-text { color:#fff; }
+  </style>
+<style>
+/* STRANTECH header polish: professional icon buttons + mobile fit */
+.nav-container{min-width:0}
+.logo-group{min-width:0;flex-shrink:1}
+.logo-text{white-space:nowrap}
+.nav-actions{display:flex;gap:.5rem;align-items:center;flex-shrink:0;margin-left:auto}.cage-badge{margin-left:.65rem;}
+.theme-toggle,.mobile-toggle{margin-right:0;align-items:center;justify-content:center;border:1px solid var(--border);background:var(--card);border-radius:8px;color:var(--text);cursor:pointer;flex-shrink:0;padding:0;line-height:0}
+.theme-toggle svg,.mobile-toggle svg{width:20px;height:20px;display:block}
+.theme-toggle:hover,.mobile-toggle:hover{border-color:var(--blue);color:var(--blue)}
+[data-theme="dark"] .theme-toggle:hover,[data-theme="dark"] .mobile-toggle:hover{border-color:var(--cyan);color:var(--cyan)}
+@media (min-width:981px){#themeToggle{display:inline-flex;width:36px;height:36px}}
+@media (max-width:980px){
+  .nav-container{gap:.75rem;padding:.65rem .9rem}
+  .logo-group{gap:.55rem}
+  .mobile-toggle,#themeToggleMobile{width:42px;height:42px}
+}
+@media (max-width:430px){
+  .cage-badge{display:none}
+  .logo-group img{height:32px}
+  .logo-text{font-size:1.05rem;overflow:hidden;text-overflow:ellipsis}
+}
+</style>
+<link rel="stylesheet" href="polish.css">
+</head>
+<body>
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="logo-group">
+        <img src="images/strantech-logo-light.png" alt="STRANTECH" />
+        <span class="logo-text">STRANTECH</span>
+        <span class="cage-badge">CAGE: 1W2E4</span>
+      </a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="capabilities.html" class="active">Capabilities</a>
+        <a href="partners.html">Partners</a>
+        <a href="about.html">About Us</a>
+        <a href="locations.html">Locations</a>
+        <a href="index.html#contact" class="btn btn-primary">Request a consultation</a>
+        <button class="theme-toggle" id="themeToggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
+      </nav>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggleMobile"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
+        <button class="mobile-toggle" id="mobileToggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+      </div>
+    </div>
+  </header>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html" onclick="closeMobile()">Home</a>
+    <a href="capabilities.html" onclick="closeMobile()">Capabilities</a>
+    <a href="partners.html" onclick="closeMobile()">Partners</a>
+    <a href="about.html" onclick="closeMobile()">About Us</a>
+    <a href="locations.html" onclick="closeMobile()">Locations</a>
+    <a href="index.html#contact" class="btn btn-primary" style="margin-top:0.4rem;" onclick="closeMobile()">Request a consultation</a>
+  </div>
+
+  <div class="page-banner" style="background-image:url(images/data-center-infrastructure.jpg)" role="img" aria-label="Capabilities"><div><h1>Capabilities</h1><p>Design, build and maintain, from one accountable team.</p></div></div>
+<section>
+    <div class="container">
+      <div class="section-label">What We Deliver</div>
+      <h1>Capabilities</h1>
+      <div class="accent-line"></div>
+      <p class="lead">Full-service expertise across the project lifecycle — design, engineering, construction, installation, testing, and long-term maintenance of mission-critical technology infrastructure. STRANTECH holds a Top Secret Facility Clearance.</p>
+
+      <div class="slideshow" id="slideshow">
+        <div class="slide active">
+          <div class="slide-img-wrap"><img src="images/data-center-infrastructure.jpg" alt="Data Center Infrastructure" /></div>
+          <div class="slide-text">
+            <h3>Data Center Infrastructure</h3>
+            <p>End-to-end data center delivery — site selection, design, construction, commissioning, and long-term sustainment — built to the uptime and security standards that mission-critical operations demand.</p>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="slide-img-wrap"><img src="images/high-density-cable-plant.jpg" alt="High-Density Cable Plant" /></div>
+          <div class="slide-text">
+            <h3>High-Density Cable Plant</h3>
+            <p>High-density copper and fiber plant engineered for scale: structured cabling, tray and rack systems, precise labeling, and full certification for clean moves, adds, and changes.</p>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="slide-img-wrap"><img src="images/osp-aerial-operations.jpg" alt="OSP & Aerial Operations" /></div>
+          <div class="slide-text">
+            <h3>OSP & Aerial Operations</h3>
+            <p>Outside plant construction including aerial fiber placement, pole attachments, and make-ready work — executed safely by experienced crews with the right equipment for the job.</p>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="slide-img-wrap"><img src="images/directional-drilling-osp.jpg" alt="Directional Drilling / OSP" /></div>
+          <div class="slide-text">
+            <h3>Directional Drilling / OSP</h3>
+            <p>Trenchless underground installation by horizontal directional drilling — placing conduit and fiber with minimal surface disruption and maximum accuracy.</p>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="slide-img-wrap"><img src="images/power-ups-systems.jpg" alt="Power & UPS Systems" /></div>
+          <div class="slide-text">
+            <h3>Power & UPS Systems</h3>
+            <p>Mission-critical power done right: UPS specification and installation — backed by deep Vertiv experience — plus battery strings, switchgear, and generator integration for true ride-through capability.</p>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="slide-img-wrap"><img src="images/secure-facilities.jpg" alt="Secure Facilities & Buildouts" /></div>
+          <div class="slide-text">
+            <h3>Secure Facilities & Buildouts</h3>
+            <p>Secure facility construction and buildouts delivered to exacting standards — cleared personnel, disciplined quality control, and rigorous closeout, from slab to sign-off.</p>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="slide-img-wrap"><img src="images/design-engineering-cad.jpg" alt="Design, Engineering & CAD" /></div>
+          <div class="slide-text">
+            <h3>Design, Engineering & CAD</h3>
+            <p>In-house design and engineering: CAD drafting, load calculations, and construction documentation that keeps field work accurate, coordinated, and on schedule.</p>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="slide-img-wrap"><img src="images/mechanical-piping-systems.jpg" alt="Mechanical & Piping Systems" /></div>
+          <div class="slide-text">
+            <h3>Mechanical & Piping Systems</h3>
+            <p>Mechanical infrastructure for critical environments — piping distribution and precision cooling systems installed, tested, and commissioned to specification.</p>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="slide-img-wrap"><img src="images/outdoor-power-infrastructure.jpg" alt="Outdoor Power Infrastructure" /></div>
+          <div class="slide-text">
+            <h3>Outdoor Power Infrastructure</h3>
+            <p>Site power infrastructure: pad-mount transformers, outdoor switchgear, and generator plants installed, tested, and fully integrated with facility systems.</p>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="slide-img-wrap"><img src="images/modular-scif-buildouts.jpg" alt="Modular & SCIF Buildouts" /></div>
+          <div class="slide-text">
+            <h3>Modular & SCIF Buildouts</h3>
+            <p>Prefabricated and modular deployments — from equipment shelters to modular data halls — delivered, set, connected, and commissioned on aggressive timelines.</p>
+          </div>
+        </div>
+        <div class="slide">
+          <div class="slide-img-wrap"><img src="images/fiber-optic-installation.jpg" alt="Fiber Optic Installation" /></div>
+          <div class="slide-text">
+            <h3>Fiber Optic Installation</h3>
+            <p>End-to-end fiber: placement, splicing, termination, and OTDR certification by technicians who protect every decibel of your loss budget.</p>
+          </div>
+        </div>
+        
+        <button class="slide-arrow prev" id="prevBtn" type="button">‹</button>
+        <button class="slide-arrow next" id="nextBtn" type="button">›</button>
+        <div class="slide-nav" id="slideNav"></div>
+      </div>
+
+      <div class="cap-detail">
+        <h2>Data Center Solutions</h2>
+        <p style="color:var(--muted);font-size:0.92rem;">Industry-leading infrastructure for critical missions, including modernizing and relocating secure data center facilities for military and intelligence communities.</p>
+        <ul>
+          <li>Data Center Assessment</li><li>Infrastructure Engineering/Design</li>
+          <li>Thermal Management</li><li>Network/Facility Cooling</li>
+          <li>Power Distribution</li><li>Fire Suppression</li>
+          <li>Environmental Monitoring</li><li>Physical/Electronic Security</li>
+          <li>Racks, Cable Ladder, Conveyance</li><li>Preventative Maintenance</li>
+        </ul>
+      </div>
+      <div class="cap-detail">
+        <h2>Specialized & Secure Construction</h2>
+        <p style="color:var(--muted);font-size:0.92rem;">Turnkey design/build for sophisticated technology infrastructure including SCIFs, NOCs, and hardened facilities.</p>
+        <ul>
+          <li>Design/Engineering/CAD</li><li>Project/Site Management</li>
+          <li>NOCs and Data Centers</li><li>Huts/Vaults, SCIF</li>
+          <li>Power Systems & Grounding</li><li>UPS/Generators</li>
+          <li>Mechanical/Electrical/Plumbing</li><li>Fire Suppression & Monitoring</li>
+          <li>Site Physical Security</li><li>Cleared American Worker Support</li>
+        </ul>
+      </div>
+      <div class="cap-detail">
+        <h2>Power Systems</h2>
+        <p style="color:var(--muted);font-size:0.92rem;">Customized power solutions for operational functionality, resilience, reliability, and energy efficiency.</p>
+        <ul>
+          <li>Design/Engineering</li><li>AC UPS and Buss Systems</li>
+          <li>DC Power Plant</li><li>Batteries, Rectifiers, Inverters</li>
+          <li>ATS & PDUs</li><li>Grounding & Fault Protection</li>
+          <li>Backup Generators/UPS</li><li>Advanced Fuel Cell Engines</li>
+        </ul>
+      </div>
+      <div class="cap-detail">
+        <h2>International Secure Construction</h2>
+        <p style="color:var(--muted);font-size:0.92rem;">Partnerships delivering Cleared American Worker (CAW) support for sensitive U.S. Government facilities domestically and internationally.</p>
+        <ul>
+          <li>Program Management/Engineering</li><li>Environmental/Mechanical Systems</li>
+          <li>Plumbing/Electrical, Fire Protection</li><li>Interior Finishes/Equipment</li>
+          <li>Threat Mitigation/Security Systems</li><li>Technical Professional Services</li>
+        </ul>
+      </div>
+      <div class="cap-detail">
+        <h2>Cable Plant & Network Infrastructure</h2>
+        <p style="color:var(--muted);font-size:0.92rem;">Design, installation and maintenance of cable infrastructure with flexibility and scalability for evolving enterprise requirements.</p>
+        <ul>
+          <li>ISP/OSP Construction (Copper/Fiber)</li><li>Structured/Bundled Fiber</li>
+          <li>WAN Circuits and Wireless LAN</li><li>Protected Distribution (SIPRNET)</li>
+          <li>Directional Drilling & Aerial Ops</li><li>Military Fiber Assemblies</li>
+        </ul>
+      </div>
+      <div class="cap-detail">
+        <h2>Unified Communications & Telecom</h2>
+        <p style="color:var(--muted);font-size:0.92rem;">Design/build solutions across critical infrastructure technologies supporting unified communications and mission-critical connectivity.</p>
+        <ul>
+          <li>Central Office Planning & Design</li><li>DWDM Installs/Tune-Up</li>
+          <li>GPON, VoIP Infrastructure</li><li>Integrated Alarm Systems</li>
+          <li>System Cutover & Racks</li><li>Voice, Data and Wireless Networks</li>
+        </ul>
+      </div>
+
+      
+      <div class="section-label" style="margin-top:3rem;">Track Record</div>
+      <h2>Program Success</h2>
+      <div class="accent-line"></div>
+      <p class="lead" style="margin-bottom:1.5rem;">Experience across large, complex, multi-discipline and multi-location IT infrastructure programs for government and commercial customers worldwide — including work at over 120 U.S. Government and DoD facilities.</p>
+
+      <div class="cap-detail">
+        <h2>Global Information Network</h2>
+        <p style="color:var(--muted);font-size:0.92rem;">Major Government net-centric initiative creating a global bandwidth-available environment. Tier-one design support for 100+ international sites including site surveys, engineering, construction, AC/DC power, generators, UPS, HVAC, fire suppression, and node cabling. Performed installations at 75% of GIG-BE sites and established a PMO in Europe.</p>
+      </div>
+      <div class="cap-detail">
+        <h2>Data Center Consolidations & Builds</h2>
+        <p style="color:var(--muted);font-size:0.92rem;">Tier-one support for classified large data center consolidation and construction: facility design/build, electrical upgrades, NOC construction, power systems, HVAC, racks and cabinets. Full technical and trade fit-out of classified data centers and operations centers for national security customers.</p>
+      </div>
+      <div class="cap-detail">
+        <h2>Specialized Secure Construction — Overseas C2 Facilities</h2>
+        <p style="color:var(--muted);font-size:0.92rem;">Interior construction of an 82,698 sq ft two-story secure facility with admin, secure data centers, command and control, utility plant, and 170,000 sq ft secure work area. 95% of fit-out including architectural, fire, plumbing, mechanical, electrical, RF/EMP shielding, and chemical/biological filtration. Full-time onsite PMO.</p>
+      </div>
+      <div class="cap-detail">
+        <h2>Communication Shelter Build & Modernization</h2>
+        <p style="color:var(--muted);font-size:0.92rem;">Design and construction of pre-cast concrete communications shelters with underground cable vaults, power systems, generators, UPS, HVAC, fire suppression, security, and grounding. Facility infrastructure upgrades for Network Enterprise Centers including power, HVAC, and environmental monitoring.</p>
+      </div>
+      <div class="cap-detail">
+        <h2>Worldwide Power System Upgrades</h2>
+        <p style="color:var(--muted);font-size:0.92rem;">Since 2016, support under a DoD multiple-award contract providing online double-conversion UPS (3 kVA to 1100+ kVA) and associated equipment for power conditioning and continuation at 100+ CONUS and OCONUS sites. Also managed hydrogen fuel cell installations at 125+ locations nationwide.</p>
+      </div>
+      <div class="cap-detail">
+        <h2>Network Operations Centers & Security</h2>
+        <p style="color:var(--muted);font-size:0.92rem;">NOC construction and reconfiguration including work areas, power, grounding, HVAC, security cameras, and situational awareness displays. County-wide electronic security design, modernization, and maintenance across 25+ buildings (video, access control, identity management, intrusion detection).</p>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="cta-band"><div class="in"><div><h2>Ready to talk through your project?</h2><p>Share a few details and a STRANTECH engineer will follow up.</p></div><div class="row"><a href="index.html#contact" class="btn btn-primary btn-lg">Request a consultation</a><a href="tel:+18883081810" class="btn btn-outline btn-lg">888.308.1810</a></div></div></div>
+<div class="callbar"><a class="btn btn-outline" style="color:#fff" href="tel:+18883081810">Call</a><a class="btn btn-primary" href="index.html#contact">Request a consultation</a></div>
+<footer>
+    <div class="logo-group" style="justify-content:center;margin-bottom:0.7rem;">
+      <img src="images/strantech-logo-light.png" alt="STRANTECH" style="height:30px" />
+      <span class="logo-text" style="font-size:1.05rem">STRANTECH</span>
+    </div>
+    <p>© 2026 STRANTECH LLC · Strengthening Mission-Critical Networks</p>
+    <p style="margin-top:0.25rem;font-size:0.78rem;opacity:0.8;">10790 Parkridge Blvd., Suite 350, Reston, VA 20191 · 888.308.1810</p>
+  </footer>
+
+  <script>
+    const root = document.documentElement;
+    const toggles = [document.getElementById('themeToggle'), document.getElementById('themeToggleMobile')];
+    /*header-icons*/const ICON_SUN='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>';const ICON_MOON='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';const ICON_MENU='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>';const ICON_CLOSE='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>';function setTheme(t) {
+      if (t === 'dark') root.setAttribute('data-theme','dark'); else root.removeAttribute('data-theme');
+      localStorage.setItem('theme', t);
+      toggles.forEach(b => { if(b) b.innerHTML = t === 'dark' ? ICON_SUN : ICON_MOON; });
+    }
+    setTheme(localStorage.getItem('theme') || 'dark');
+    toggles.forEach(b => { if(b) b.addEventListener('click', () => setTheme(root.getAttribute('data-theme')==='dark'?'light':'dark')); });
+    const mobileToggle = document.getElementById('mobileToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    mobileToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('open');
+      mobileToggle.innerHTML = mobileMenu.classList.contains('open') ? ICON_CLOSE : ICON_MENU;
+    });
+    function closeMobile() { mobileMenu.classList.remove('open'); mobileToggle.innerHTML = ICON_MENU; }
+
+    let current = 0, autoplay = true, timer = null;
+    const slides = document.querySelectorAll('.slide');
+    const nav = document.getElementById('slideNav');
+    slides.forEach((_, i) => {
+      const d = document.createElement('button');
+      d.className = 'slide-dot' + (i===0?' active':'');
+      d.onclick = () => { stop(); goTo(i); };
+      nav.appendChild(d);
+    });
+    function goTo(n) {
+      slides[current].classList.remove('active');
+      nav.children[current].classList.remove('active');
+      current = (n + slides.length) % slides.length;
+      slides[current].classList.add('active');
+      nav.children[current].classList.add('active');
+    }
+    function stop() { autoplay = false; if(timer) { clearInterval(timer); timer = null; } }
+    document.getElementById('prevBtn').addEventListener('click', () => { stop(); goTo(current-1); });
+    document.getElementById('nextBtn').addEventListener('click', () => { stop(); goTo(current+1); });
+    timer = setInterval(() => { if(autoplay) goTo(current+1); }, 5000);
+  </script>
+</body>
+</html>

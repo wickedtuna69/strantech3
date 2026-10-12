@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>STRANTECH | Mission-Critical Infrastructure & Defense</title>
+<meta name="description" content="STRANTECH delivers engineering, construction, power, telecommunications and mission-critical technology infrastructure for U.S. federal agencies, defense organizations and commercial customers worldwide. CAGE 1W2E4. Top Secret facility clearance.">
+<link rel="icon" type="image/png" href="images/strantech-logo.png">
+<link rel="stylesheet" href="polish.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}body{line-height:1.65;overflow-x:hidden}img{display:block;max-width:100%}
+.wrap{max-width:1180px;margin:0 auto;padding:0 1.5rem}section{padding:5rem 0}.alt{background:var(--bg-alt)}
+header{position:fixed;top:0;left:0;right:0;z-index:100}
+.nav-container{max-width:1180px;margin:0 auto;padding:.7rem 1.5rem;display:flex;align-items:center;justify-content:space-between;gap:1.2rem}
+.logo-group{display:flex;align-items:center;gap:.6rem;text-decoration:none}
+nav{display:flex;align-items:center;gap:1.4rem}nav a{text-decoration:none;font-size:.86rem;font-weight:500}nav a.btn{color:#fff;font-size:.74rem}
+.mobile-toggle{display:none;width:40px;height:40px;border:1px solid var(--border);background:var(--card);color:#fff;border-radius:6px;font-size:1.1rem}
+.mobile-menu{display:none;position:fixed;top:58px;left:0;right:0;background:var(--bg);padding:1rem 1.5rem 1.5rem;z-index:99;flex-direction:column;border-bottom:1px solid var(--border)}
+.mobile-menu.open{display:flex}.mobile-menu a{color:#fff;text-decoration:none;padding:.7rem 0;border-bottom:1px solid var(--border)}.mobile-menu a.btn{border:0;margin-top:.8rem;text-align:center}
+.hero{position:relative;padding:9rem 0 7rem;background:var(--ink);overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0 0 0 38%;background:url(images/high-density-cable-plant.jpg) center/cover;-webkit-mask-image:linear-gradient(90deg,transparent,#000 45%);mask-image:linear-gradient(90deg,transparent,#000 45%);opacity:.8}
+.hero::after{content:"";position:absolute;inset:auto 0 0;height:140px;background:linear-gradient(transparent,var(--ink))}
+.hero .wrap{position:relative;z-index:2}.hero .in{max-width:640px}
+.kicker{font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:#c3cfe4;margin-bottom:1.2rem}
+h1{font-size:clamp(2.5rem,5.4vw,4.3rem);line-height:1.04;font-weight:800;letter-spacing:-.025em;color:#fff}h1 span{color:#6ea8ff;display:block}
+.hero p{color:#d3dcec;font-size:1.08rem;margin:1.4rem 0 1.8rem}
+.badges{display:flex;flex-wrap:wrap;gap:.7rem;margin-bottom:1.8rem}.badges div{border:1px solid #2a4570;background:#0a1a3380;border-radius:6px;padding:.55rem 1rem;font-size:.82rem;color:#c3cfe4;line-height:1.3}.badges b{display:block;color:#fff;font-family:'Archivo';font-size:.98rem}
+.row{display:flex;flex-wrap:wrap;gap:.8rem;align-items:center}
+.tiles{position:relative;z-index:3;margin-top:-4rem}.tiles .wrap{display:grid;grid-template-columns:repeat(6,1fr);gap:.8rem}
+.tile{position:relative;display:flex;flex-direction:column;min-height:300px;border:1px solid var(--border);border-radius:6px;overflow:hidden;background:var(--card);text-decoration:none;color:#fff}
+.tile img{position:absolute;inset:auto 0 0;height:55%;width:100%;object-fit:cover;opacity:.8;transition:opacity .2s}.tile:hover img{opacity:1}.tile:hover{border-color:var(--signal)}
+.tile::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,var(--card) 35%,transparent 100%)}
+.tile div{position:relative;z-index:2;padding:1.1rem 1rem}.tile svg{width:30px;height:30px;stroke:#9cc4ff;fill:none;stroke-width:1.5;margin-bottom:.6rem}
+.tile h3{font-size:1rem;line-height:1.25;margin-bottom:.4rem}.tile p{font-size:.84rem;color:#c3cfe4;line-height:1.45}
+.stats{padding:3rem 0;border-block:1px solid var(--border);margin-top:3rem}.stats .wrap{display:grid;grid-template-columns:repeat(5,1fr);gap:1.5rem}
+.stat b{display:block;font:800 2.2rem/1 'Archivo';color:#fff}.stat span{font-size:.88rem;color:var(--muted)}
+.fed{position:relative;overflow:hidden}.fed::before{content:"";position:absolute;inset:0 0 0 45%;background:url(images/secure-facilities.jpg) center/cover;opacity:.35;-webkit-mask-image:linear-gradient(90deg,transparent,#000 40%);mask-image:linear-gradient(90deg,transparent,#000 40%)}
+.fed .wrap{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:3.5rem}
+h2{font-size:clamp(1.8rem,3.4vw,2.7rem);line-height:1.1;max-width:20ch}.lead{color:var(--muted);max-width:60ch;margin-top:1rem;font-size:1.03rem}
+.facts{list-style:none;display:grid;gap:.9rem;border-left:1px solid var(--border);padding-left:2rem}.facts li{font-size:.95rem;color:var(--muted)}.facts b{display:block;color:#fff;font-family:'Archivo'}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:center}.split img{border-radius:8px;width:100%}
+.steps{list-style:none;margin-top:2rem;counter-reset:s}.steps li{counter-increment:s;padding:1rem 0 1rem 3.2rem;border-top:1px solid var(--border);position:relative}
+.steps li::before{content:counter(s);position:absolute;left:0;top:1rem;width:2.1rem;height:2.1rem;border-radius:50%;background:var(--signal);color:#fff;font:700 .95rem 'Archivo';display:grid;place-items:center}
+.steps b{display:block;font-family:'Archivo';color:#fff}.steps span{color:var(--muted);font-size:.93rem}
+.strip{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:230px 230px;gap:.8rem;margin-top:2.5rem}.strip figure{position:relative;border-radius:8px;overflow:hidden}.strip figure:first-child{grid-row:span 2}.strip img{width:100%;height:100%;object-fit:cover}
+.strip figcaption{position:absolute;inset:auto 0 0;padding:1.8rem 1rem .8rem;background:linear-gradient(transparent,rgba(5,13,28,.9));color:#fff;font-size:.85rem;font-weight:600}
+.tags{display:flex;flex-wrap:wrap;gap:.5rem;margin:1rem 0 2.2rem}.tags span{background:var(--card);border:1px solid var(--border);padding:.35rem .8rem;border-radius:4px;font-size:.88rem;color:#c3cfe4}
+h3.sub{font-size:1.05rem;margin-top:2rem;color:#fff}
+.about{display:grid;grid-template-columns:1.1fr 1fr;gap:3.5rem;align-items:center}.about img{border-radius:8px;width:100%}
+.contact{background:linear-gradient(180deg,#08142a,#050d1c);border-top:1px solid var(--border)}.contact .wrap{display:grid;grid-template-columns:1fr 1.1fr;gap:3.5rem}
+.direct{margin-top:2rem}.direct a.big{font:800 2.2rem 'Archivo';color:#fff;text-decoration:none}.direct p{color:var(--muted);margin-top:.6rem;font-size:.95rem}
+form{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:1.8rem;display:grid;gap:1rem}.r2{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+label{font-size:.82rem;font-weight:600;display:grid;gap:.35rem;color:#c3cfe4}input,select,textarea{font:inherit;padding:.75rem .9rem;border:1px solid var(--border);border-radius:4px;background:#050d1c;color:#fff;width:100%}textarea{min-height:110px;resize:vertical}
+form .btn{border:0;cursor:pointer;padding:1.05rem}#formStatus{font-size:.9rem;min-height:1.2em;color:var(--muted)}
+footer{padding:2.5rem 1.5rem;text-align:center;font-size:.85rem}
+@media(max-width:1080px){.tiles .wrap{grid-template-columns:repeat(3,1fr)}.stats .wrap{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:980px){nav{display:none}.mobile-toggle{display:block}.fed .wrap,.split,.about,.contact .wrap{grid-template-columns:1fr}.hero::before{inset:0;opacity:.35;-webkit-mask-image:none;mask-image:none}.facts{border:0;padding:0}.fed::before{opacity:.15}}
+@media(max-width:640px){section{padding:3.6rem 0}.hero{padding:7rem 0 6rem}.tiles .wrap,.stats .wrap{grid-template-columns:1fr 1fr}.r2{grid-template-columns:1fr}.strip{grid-template-columns:1fr;grid-template-rows:none}.strip figure,.strip figure:first-child{grid-row:auto;height:210px}.cage-badge{display:none}}
+</style></head>
+<body>
+<header><div class="nav-container">
+<a href="index.html" class="logo-group"><img src="images/strantech-logo-light.png" alt=""><span class="logo-text">STRANTECH</span><span class="cage-badge">CAGE 1W2E4</span></a>
+<nav><a href="capabilities.html">Capabilities</a><a href="partners.html">Federal Contracting</a><a href="#performance">Past Performance</a><a href="locations.html">Global Operations</a><a href="about.html">About</a><a href="#contact">Contact</a><a href="#contact" class="btn btn-primary">Request a consultation</a></nav>
+<button class="mobile-toggle" id="menuBtn" aria-label="Menu">☰</button></div></header>
+<div class="mobile-menu" id="menu"><a href="capabilities.html">Capabilities</a><a href="partners.html">Federal Contracting</a><a href="#performance">Past Performance</a><a href="locations.html">Global Operations</a><a href="about.html">About</a><a href="#contact">Contact</a><a href="#contact" class="btn btn-primary">Request a consultation</a></div>
+
+<section class="hero"><div class="wrap"><div class="in">
+<div class="kicker">Mission-critical infrastructure. Anywhere in the world.</div>
+<h1>Secure infrastructure,<span>built and kept running.</span></h1>
+<p>STRANTECH delivers engineering, construction, power, telecommunications and mission-critical technology infrastructure for U.S. federal agencies, defense organizations and commercial customers worldwide.</p>
+<div class="badges"><div>CAGE<b>1W2E4</b></div><div><b>GSA MAS</b>Contract holder</div><div><b>Top Secret</b>Facility clearance</div></div>
+<div class="row"><a href="#contact" class="btn btn-primary btn-lg">Request a consultation</a><a href="capabilities.html" class="btn btn-outline btn-lg">Explore our capabilities</a></div>
+</div></div></section>
+
+<div class="tiles" id="capabilities"><div class="wrap">
+<a class="tile" href="capabilities.html"><div><svg viewBox="0 0 24 24"><path d="M4 20V4l16 16zM4 14h6"/></svg><h3>Engineering & Design</h3><p>Multi-discipline engineering, CAD and site assessment.</p></div><img src="images/design-engineering-cad.jpg" alt="" loading="lazy"></a>
+<a class="tile" href="capabilities.html"><div><svg viewBox="0 0 24 24"><path d="M3 18h18M5 18a7 7 0 0 1 14 0M12 8v3"/></svg><h3>Construction Management</h3><p>SCIF, NOC and data center builds, in any environment.</p></div><img src="images/modular-scif-buildouts.jpg" alt="" loading="lazy"></a>
+<a class="tile" href="capabilities.html"><div><svg viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg><h3>Power Infrastructure</h3><p>UPS, generators, fuel cells and AC/DC plant design.</p></div><img src="images/power-ups-systems.jpg" alt="" loading="lazy"></a>
+<a class="tile" href="capabilities.html"><div><svg viewBox="0 0 24 24"><path d="M12 11v10M8 21h8M7 7a7 7 0 0 1 10 0M4 4a11 11 0 0 1 16 0"/><circle cx="12" cy="10" r="1"/></svg><h3>Telecommunications</h3><p>GPON, VoIP, DWDM and central office cutovers.</p></div><img src="images/osp-aerial-operations.jpg" alt="" loading="lazy"></a>
+<a class="tile" href="capabilities.html"><div><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="7" rx="1"/><rect x="4" y="14" width="16" height="7" rx="1"/><path d="M8 6.5h.01M8 17.5h.01"/></svg><h3>Technology Infrastructure</h3><p>Data centers, cooling, racks and structured cabling.</p></div><img src="images/data-center-infrastructure.jpg" alt="" loading="lazy"></a>
+<a class="tile" href="capabilities.html"><div><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg><h3>Operations & Maintenance</h3><p>Test, preventative maintenance and lifecycle support.</p></div><img src="images/fiber-optic-installation.jpg" alt="" loading="lazy"></a>
+</div></div>
+
+<div class="stats"><div class="wrap">
+<div class="stat"><b>30+</b><span>Years delivering critical infrastructure</span></div>
+<div class="stat"><b>12+</b><span>Federal agencies and services supported</span></div>
+<div class="stat"><b>17</b><span>Locations delivered, U.S. and overseas</span></div>
+<div class="stat"><b>TS</b><span>Top Secret facility clearance</span></div>
+<div class="stat"><b>ISO 9001</b><span>Certified quality management, 2015</span></div>
+</div></div>
+
+<section class="fed" id="contracts"><div class="wrap">
+<div><h2>A trusted partner for federal missions.</h2>
+<p class="lead">We hold a DoD Top Secret facility clearance and a large workforce with U.S. Government-administered clearances, and we support CMMC requirements.</p>
+<div class="row" style="margin-top:2rem"><a href="partners.html" class="btn btn-primary btn-lg">View contract details</a></div></div>
+<ul class="facts"><li><b>GSA MAS</b>47QSWA-19-D-004F</li><li><b>U.S. Air Force PCCIE MAC III</b>Power Conditioning Continuation and Interfacing Equipment</li><li><b>DLA NISS IDIQ</b>Network Infrastructure Support Services</li><li><b>CAGE 1W2E4</b>SAM active registration</li></ul>
+</div></section>
+
+<section class="alt"><div class="wrap split">
+<div><h2>One lifecycle, one point of accountability.</h2><p class="lead">Professional engineers across civil, electrical, mechanical, structural and telecommunications disciplines stay with your project from first drawing to last maintenance visit.</p>
+<ol class="steps"><li><b>Assess and design</b><span>Engineering and CAD, with site assessment up front.</span></li><li><b>Build and install</b><span>Mechanical, electrical, cable plant and secure construction by cleared crews.</span></li><li><b>Maintain and support</b><span>Test, preventative maintenance and lifecycle support after cutover.</span></li></ol></div>
+<div style="display:grid;gap:1rem"><img src="images/design-engineering-cad.jpg" alt="Engineer reviewing a facility plan on a CAD workstation" loading="lazy"><img src="images/mechanical-piping-systems.jpg" alt="Mechanical piping system overlaid with engineering drawings" loading="lazy"></div>
+</div></section>
+
+<section><div class="wrap"><h2>On the ground, wherever the work is.</h2>
+<div class="strip">
+<figure><img src="images/directional-drilling-osp.jpg" alt="Operator running a horizontal directional drill" loading="lazy"><figcaption>Directional drilling for outside plant</figcaption></figure>
+<figure><img src="images/outdoor-power-infrastructure.jpg" alt="Outdoor fuel cell power units" loading="lazy"><figcaption>Outdoor power infrastructure</figcaption></figure>
+<figure><img src="images/fiber-optic-installation.jpg" alt="Technician terminating fiber" loading="lazy"><figcaption>Fiber termination</figcaption></figure>
+<figure style="grid-column:span 2"><img src="images/osp-aerial-operations.jpg" alt="Aerial lift crew at a utility pole" loading="lazy"><figcaption>Aerial OSP operations</figcaption></figure>
+</div></div></section>
+
+<section id="performance" class="alt"><div class="wrap">
+<h2>Proven past performance.</h2>
+<p class="lead">STRANTECH has built, maintained and secured mission-critical information and infrastructure for the U.S. Government and its top system integrators, and for large multinational corporations, for over three decades.</p>
+<h3 class="sub">Trusted by</h3><div class="tags"><span>U.S. Army</span><span>U.S. Navy</span><span>U.S. Air Force</span><span>U.S. Marine Corps</span><span>DISA</span><span>DHS</span><span>NASA</span><span>NGA</span><span>Army National Guard</span><span>DOJ</span><span>Veterans Affairs</span><span>U.S. Postal Service</span></div>
+<h3 class="sub" id="global">Delivered in</h3><div class="tags"><span>Continental U.S.</span><span>Hawaii</span><span>Guam</span><span>Kwajalein</span><span>Germany</span><span>Italy</span><span>Greece</span><span>Spain</span><span>United Kingdom</span><span>Japan</span><span>South Korea</span><span>Diego Garcia</span><span>Bahrain</span><span>Kuwait</span><span>UAE</span><span>Saudi Arabia</span><span>Qatar</span></div>
+<h3 class="sub">Certifications</h3><div class="tags"><span>ISO 9001:2015</span><span>AS9100</span><span>UL Registered Firm</span><span>ANAB</span><span>PMI</span><span>HSPD-12 Service Provider</span><span>CSEIP</span><span>BICSI RCDD</span><span>BICSI Certified Technicians</span></div>
+</div></section>
+
+<section><div class="wrap about">
+<div><h2>Same trusted team. Expanded reach.</h2><p class="lead">On January 21, 2026, Stran Technologies IT Services and AllCom Global Services LLC became STRANTECH. Protecting critical infrastructure is vital to national and economic security, and our ISO 9001:2015 quality system keeps every project reliable, secure and accountable.</p>
+<div class="row" style="margin-top:2rem"><a href="about.html" class="btn btn-outline btn-lg">Meet the team</a></div></div>
+<img src="images/naugatuck-facility.jpg" alt="STRANTECH Naugatuck facility surrounded by autumn foliage" loading="lazy">
+</div></section>
+
+<section id="contact" class="contact"><div class="wrap">
+<div><h2>Tell us about your project.</h2><p class="lead">Data centers, secure facilities, power, cable plant or contract support: share a few details and an engineer will respond.</p>
+<div class="direct"><a class="big" href="tel:+18883081810">888.308.1810</a><p>Headquarters<br>10790 Parkridge Blvd., Suite 350, Reston, VA 20191</p></div></div>
+<form id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="post">
+<div class="r2"><label>Name<input name="name" required autocomplete="name"></label><label>Organization<input name="organization" autocomplete="organization"></label></div>
+<div class="r2"><label>Work email<input type="email" name="email" required autocomplete="email"></label><label>Phone<input type="tel" name="phone" autocomplete="tel"></label></div>
+<label>What do you need?<select name="interest"><option>Engineering and design</option><option>Construction / SCIF</option><option>Power infrastructure</option><option>Telecommunications</option><option>Technology infrastructure</option><option>Operations and maintenance</option><option>Contract vehicle question</option></select></label>
+<label>Project details<textarea name="message"></textarea></label>
+<button class="btn btn-primary" type="submit">Request a consultation</button><p id="formStatus" role="status"></p></form>
+</div></section>
+
+<footer><p>© 2026 STRANTECH LLC. Strengthening mission-critical networks. Safeguarding innovation.</p><p style="margin-top:.4rem">Reston, VA · <a href="tel:+18883081810">888.308.1810</a> · <a href="https://www.strantech.com">strantech.com</a></p></footer>
+<div class="callbar"><a class="btn btn-outline" href="tel:+18883081810">Call</a><a class="btn btn-primary" href="#contact">Request a consultation</a></div>
+<script src="polish.js"></script>
+<script>var m=document.getElementById('menu');document.getElementById('menuBtn').onclick=function(){m.classList.toggle('open')};m.onclick=function(){m.classList.remove('open')};</script>
+</body></html>
