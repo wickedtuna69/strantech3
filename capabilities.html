@@ -42,45 +42,30 @@
     h1 { font-size:clamp(1.7rem,3.2vw,2.3rem); font-weight:700; }
     h2 { font-size:1.25rem; font-weight:700; }
     .lead { font-size:1rem; color:var(--muted); max-width:700px; }
-    /* Half-and-half slideshow */
-    .slideshow {
-      position:relative; width:100%; border-radius:10px; overflow:hidden;
-      background:#0d1117; margin:2rem 0 2.5rem; min-height:340px;
-      box-shadow:0 10px 32px rgba(0,0,0,0.18);
-    }
-    .slide {
-      position:absolute; inset:0; opacity:0; transition:opacity 0.6s ease;
-      display:grid; grid-template-columns:1fr 1fr; background:#0d1117;
-    }
-    .slide.active { opacity:1; z-index:2; }
-    .slide-img-wrap {
-      display:flex; align-items:center; justify-content:center; background:#0d1117; padding:1rem;
-    }
-    .slide-img-wrap img { max-width:100%; max-height:320px; width:auto; height:auto; object-fit:contain; }
-    .slide-text {
-      display:flex; flex-direction:column; justify-content:center; padding:1.75rem 1.5rem;
-      background:linear-gradient(135deg,#0a1628,#132337); color:#fff;
-    }
-    .slide-text h3 { font-size:1.2rem; margin-bottom:0.6rem; color:#67e8f9; }
-    .slide-text p { font-size:0.9rem; color:rgba(255,255,255,0.75); line-height:1.55; }
-    .slide-arrow {
-      position:absolute; top:50%; transform:translateY(-50%); z-index:5;
-      background:rgba(255,255,255,0.92); border:none; width:40px; height:40px;
-      border-radius:50%; font-size:1.3rem; cursor:pointer; color:#0a1628;
-      display:flex; align-items:center; justify-content:center;
-      box-shadow:0 4px 12px rgba(0,0,0,0.25);
-    }
-    .slide-arrow.prev { left:0.75rem; }
-    .slide-arrow.next { right:0.75rem; }
-    .slide-nav { position:absolute; bottom:0.75rem; left:50%; transform:translateX(-50%); z-index:5; display:flex; gap:0.35rem; }
-    .slide-dot { width:9px; height:9px; border-radius:50%; background:rgba(255,255,255,0.35); border:none; cursor:pointer; padding:0; }
-    .slide-dot.active { background:#fff; }
-    @media (max-width:700px) {
-      .slide { grid-template-columns:1fr; }
-      .slide-img-wrap { min-height:180px; }
-      .slide-img-wrap img { max-height:200px; }
-      .slideshow { min-height:420px; }
-    }
+    /* Seamless editorial capability layout */
+    .capability-feature-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1.15rem; margin:2.2rem 0 3.25rem; }
+    .capability-feature { overflow:hidden; border:1px solid var(--border); border-radius:12px; background:var(--card); box-shadow:0 12px 30px rgba(0,0,0,.08); }
+    .capability-feature-wide { grid-column:1 / -1; display:grid; grid-template-columns:1.12fr 1fr; }
+    .capability-photo { height:245px; overflow:hidden; background:#0a1628; }
+    .capability-feature-wide .capability-photo { height:100%; min-height:300px; }
+    .capability-photo img { display:block; width:100%; height:100%; object-fit:cover; transition:transform .5s ease; }
+    .capability-feature:hover .capability-photo img { transform:scale(1.035); }
+    .capability-copy { padding:1.4rem 1.5rem 1.55rem; }
+    .capability-feature-wide .capability-copy { display:flex; flex-direction:column; justify-content:center; padding:clamp(1.5rem,3vw,2.5rem); }
+    .capability-kicker { color:var(--blue); font-size:.7rem; font-weight:700; letter-spacing:.13em; text-transform:uppercase; }
+    [data-theme="dark"] .capability-kicker { color:var(--cyan); }
+    .capability-copy h2 { font-size:clamp(1.15rem,2vw,1.55rem); margin:.4rem 0 .6rem; }
+    .capability-copy p,.capability-band-intro p,.capability-mini p { color:var(--muted); font-size:.91rem; line-height:1.65; margin:0; }
+    .capability-copy a { margin-top:1rem; font-size:.88rem; font-weight:650; color:var(--blue); text-decoration:none; }
+    [data-theme="dark"] .capability-copy a { color:var(--cyan); }
+    .capability-band { margin:0 0 3rem; padding:clamp(1.4rem,3vw,2.4rem); border:1px solid var(--border); border-radius:14px; background:linear-gradient(130deg,rgba(20,55,91,.10),rgba(34,211,238,.045)); }
+    .capability-band-intro { max-width:720px; margin-bottom:1.5rem; }
+    .capability-band-intro h2 { font-size:clamp(1.4rem,2.4vw,1.9rem); margin:.3rem 0 .6rem; }
+    .capability-mini-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1rem; }
+    .capability-mini { display:grid; grid-template-columns:120px 1fr; gap:1rem; align-items:center; padding:.8rem; border:1px solid var(--border); border-radius:10px; background:var(--card); }
+    .capability-mini img { width:120px; height:96px; object-fit:cover; border-radius:7px; }
+    .capability-mini h3 { font-size:1rem; margin:0 0 .3rem; }
+    @media (max-width:700px) { .capability-feature-grid,.capability-feature-wide,.capability-mini-grid { grid-template-columns:1fr; } .capability-feature-wide { grid-column:auto; } .capability-feature-wide .capability-photo { min-height:0; height:230px; } .capability-photo { height:220px; } .capability-mini { grid-template-columns:100px 1fr; } .capability-mini img { width:100px; height:88px; } }
     .cap-detail { background:var(--card); border:1px solid var(--border); border-radius:8px; padding:1.5rem; margin-bottom:1.25rem; }
     .cap-detail h2 { color:var(--blue); font-size:1.15rem; margin-bottom:0.4rem; }
     [data-theme="dark"] .cap-detail h2 { color:var(--cyan); }
@@ -141,34 +126,34 @@
       <div class="accent-line"></div>
       <p class="lead">Full-service expertise across the project lifecycle — design, engineering, construction, installation, testing, and long-term maintenance of mission-critical technology infrastructure. STRANTECH holds a Top Secret Facility Clearance.</p>
 
-      <div class="slideshow" id="slideshow">
-        <div class="slide active">
-          <div class="slide-img-wrap"><img src="images/data-center-infrastructure.jpg" alt="Data Center Infrastructure" /></div>
-          <div class="slide-text">
-            <h3>Data Center Infrastructure</h3>
-            <p>End-to-end data center delivery — site selection, design, construction, commissioning, and long-term sustainment — built to the uptime and security standards that mission-critical operations demand.</p>
-          </div>
-        </div>
-        <div class="slide">
-          <div class="slide-img-wrap"><img src="images/high-density-cable-plant.jpg" alt="High-Density Cable Plant" /></div>
-          <div class="slide-text">
-            <h3>High-Density Cable Plant</h3>
-            <p>High-density copper and fiber plant engineered for scale: structured cabling, tray and rack systems, precise labeling, and full certification for clean moves, adds, and changes.</p>
-          </div>
-        </div>
-        <div class="slide">
-          <div class="slide-img-wrap"><img src="images/modular-scif-buildouts.jpg" alt="Modular &amp; SCIF Buildouts" /></div>
-          <div class="slide-text">
-            <h3>Modular &amp; SCIF Buildouts</h3>
-            <p>Prefabricated and modular deployments — from equipment shelters to modular data halls — delivered, set, connected, and commissioned on aggressive timelines.</p>
-          </div>
-        </div>
-        <button class="slide-arrow prev" id="prevBtn" type="button" aria-label="Previous slide">‹</button>
-        <button class="slide-arrow next" id="nextBtn" type="button" aria-label="Next slide">›</button>
-        <div class="slide-nav" id="slideNav" aria-label="Choose slideshow photo"></div>
+      <div class="capability-feature-grid" aria-label="Featured capabilities">
+        <article class="capability-feature capability-feature-wide">
+          <div class="capability-photo"><img src="images/data-center-infrastructure.jpg" alt="Mission-critical data center infrastructure" loading="lazy"></div>
+          <div class="capability-copy"><span class="capability-kicker">Mission-critical IT</span><h2>Data Center Infrastructure</h2><p>Build, modernize, and sustain resilient data center environments—from facility infrastructure and power distribution to commissioning and lifecycle support.</p><a href="#data-center-solutions">Explore data center solutions <span aria-hidden="true">→</span></a></div>
+        </article>
+        <article class="capability-feature">
+          <div class="capability-photo"><img src="images/high-density-cable-plant.jpg" alt="High-density structured cabling and fiber infrastructure" loading="lazy"></div>
+          <div class="capability-copy"><span class="capability-kicker">Connectivity at scale</span><h2>High-Density Cable Plant</h2><p>Structured copper and fiber systems, cable pathways, labeling, testing, and certification engineered for performance and maintainability.</p></div>
+        </article>
+        <article class="capability-feature">
+          <div class="capability-photo"><img src="images/modular-scif-buildouts.jpg" alt="Modular secure facility buildout" loading="lazy"></div>
+          <div class="capability-copy"><span class="capability-kicker">Secure environments</span><h2>Modular &amp; Secure Buildouts</h2><p>Purpose-built modular spaces and sensitive facility environments coordinated from design and construction through systems integration and turnover.</p></div>
+        </article>
       </div>
 
-      <div class="cap-detail">
+      <div class="capability-band">
+        <div class="capability-band-intro"><div class="section-label">Built for uptime</div><h2>Infrastructure that keeps critical missions moving.</h2><p>Integrated expertise across power, secure construction, network connectivity, and facility resilience.</p></div>
+        <div class="capability-mini-grid">
+          <article class="capability-mini"><img src="images/power-ups-systems.jpg" alt="Uninterruptible power and electrical systems" loading="lazy"><div><h3>Resilient Power &amp; UPS</h3><p>Backup power, UPS, distribution, grounding, and continuity planning.</p></div></article>
+          <article class="capability-mini"><img src="images/secure-facilities.jpg" alt="Secure facility infrastructure" loading="lazy"><div><h3>Secure Facilities</h3><p>Specialized construction and integrated physical security for sensitive environments.</p></div></article>
+          <article class="capability-mini"><img src="images/fiber-optic-installation.jpg" alt="Fiber optic network installation" loading="lazy"><div><h3>Fiber &amp; Network Modernization</h3><p>Scalable fiber backbones, structured cabling, and network infrastructure.</p></div></article>
+          <article class="capability-mini"><img src="images/mechanical-piping-systems.jpg" alt="Mechanical piping and building systems" loading="lazy"><div><h3>MEP &amp; Facility Systems</h3><p>Mechanical, electrical, plumbing, cooling, and integrated facility systems.</p></div></article>
+          <article class="capability-mini"><img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&amp;fit=crop&amp;w=640&amp;q=80" alt="Cybersecurity operations and digital network visualization" loading="lazy"><div><h3>Cybersecurity &amp; Resilience</h3><p>Security-minded infrastructure planning, risk reduction, and resilient technology environments.</p></div></article>
+          <article class="capability-mini"><img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&amp;fit=crop&amp;w=640&amp;q=80" alt="Engineering professional working with technical systems" loading="lazy"><div><h3>Engineering &amp; Modernization</h3><p>Technical assessments, design coordination, integration, and lifecycle upgrades.</p></div></article>
+        </div>
+      </div>
+
+      <div class="cap-detail" id="data-center-solutions">
         <h2>Data Center Solutions</h2>
         <p style="color:var(--muted);font-size:0.92rem;">Industry-leading infrastructure for critical missions, including modernizing and relocating secure data center facilities for military and intelligence communities.</p>
         <ul>
@@ -291,26 +276,7 @@
     });
     function closeMobile() { mobileMenu.classList.remove('open'); mobileToggle.innerHTML = ICON_MENU; }
 
-    let current = 0, autoplay = true, timer = null;
-    const slides = document.querySelectorAll('.slide');
-    const nav = document.getElementById('slideNav');
-    slides.forEach((_, i) => {
-      const d = document.createElement('button');
-      d.className = 'slide-dot' + (i===0?' active':'');
-      d.onclick = () => { stop(); goTo(i); };
-      nav.appendChild(d);
-    });
-    function goTo(n) {
-      slides[current].classList.remove('active');
-      nav.children[current].classList.remove('active');
-      current = (n + slides.length) % slides.length;
-      slides[current].classList.add('active');
-      nav.children[current].classList.add('active');
-    }
-    function stop() { autoplay = false; if(timer) { clearInterval(timer); timer = null; } }
-    document.getElementById('prevBtn').addEventListener('click', () => { stop(); goTo(current-1); });
-    document.getElementById('nextBtn').addEventListener('click', () => { stop(); goTo(current+1); });
-    timer = setInterval(() => { if(autoplay) goTo(current+1); }, 5000);
+
   </script>
 <script src="polish.js"></script>
 </body>
