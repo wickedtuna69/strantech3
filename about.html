@@ -77,6 +77,22 @@
 </style>
 <link rel="stylesheet" href="polish.css">
 <link rel="stylesheet" href="sitewide.css">
+
+<style id="strantech-centering-fix">
+/* Center the site consistently and prevent horizontal overflow. */
+html, body { width:100%; max-width:100%; margin:0; overflow-x:clip; }
+*, *::before, *::after { box-sizing:border-box; }
+header { left:0 !important; right:0 !important; width:100% !important; }
+.nav-container, .wrap, .container, .page-banner .wrap { margin-left:auto !important; margin-right:auto !important; }
+.nav-container { width:100%; }
+img, video, iframe { max-width:100%; }
+@media (min-width:901px) and (max-width:1280px) {
+  header nav { display:none !important; }
+  header .mobile-toggle { display:inline-flex !important; align-items:center; justify-content:center; }
+  .nav-container { width:100% !important; max-width:1180px !important; padding-left:clamp(1rem,3vw,2rem) !important; padding-right:clamp(1rem,3vw,2rem) !important; }
+}
+</style>
+
 </head>
 <body>
   <header>
@@ -104,7 +120,7 @@
 
       <div class="about-grid">
         <div class="about-text">
-          <p><strong>Jim Stranberg founded STRAN Technologies in 1997</strong> and later served as its CEO. The company is based in Naugatuck, Connecticut, and develops rugged fiber-optic and hybrid connectivity products for demanding environments, including military, aerospace, oil and gas, and telecommunications uses.</p>
+          <p><strong>Jim Stranberg founded STRAN Technologies in 1997</strong> and later served as its CEO. The company was based in Naugatuck, Connecticut, and developed rugged fiber-optic and hybrid connectivity products for demanding environments, including military, aerospace, oil and gas, and telecommunications uses.</p>
           <p>In January 2026, AllCom Global Services, LLC was acquired by Bellevue Private Equity to create <strong>STRANTECH</strong> — combining deep product heritage with full-lifecycle infrastructure delivery.</p>
           <p>Our employees embrace the responsibility of making sure your technology infrastructure meets your requirements. Our staff includes Professional Engineers, Certified Technical Experts and Project Managers, as well as trained and skilled teams of installers and technicians. Working together with our customers and industry partners, we deliver proven results.</p>
           <p>Founded in 1997, the organization has more than 150 employees globally implementing and supporting mission-critical technology infrastructure. STRANTECH is an <strong>ISO 9001:2015 certified</strong> corporation (Certificate No: 15.299.1) and holds a <strong>Top Secret Facility Clearance</strong>.</p>

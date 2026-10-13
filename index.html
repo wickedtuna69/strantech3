@@ -58,7 +58,23 @@ footer{padding:2.5rem 1.5rem;text-align:center;font-size:.85rem}
 @media(max-width:1080px){.tiles .wrap{grid-template-columns:repeat(3,1fr)}.stats .wrap{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:980px){nav{display:none}.mobile-toggle{display:block}.fed .wrap,.split,.about,.contact .wrap{grid-template-columns:1fr}.hero::before{background:linear-gradient(180deg,rgba(5,13,28,.85),rgba(5,13,28,.7))}.dots{right:auto;left:1.5rem}.facts{border:0;padding:0}.fed::before{opacity:.3}}
 @media(max-width:640px){section{padding:3.6rem 0}.hero{padding:7rem 0 6rem}.tiles .wrap,.stats .wrap{grid-template-columns:1fr 1fr}.r2{grid-template-columns:1fr}.strip{grid-template-columns:1fr;grid-template-rows:none}.strip figure,.strip figure:first-child{grid-row:auto;height:210px}.cage-badge{display:none}}
-</style></head>
+</style>
+<style id="strantech-centering-fix">
+/* Center the site consistently and prevent horizontal overflow. */
+html, body { width:100%; max-width:100%; margin:0; overflow-x:clip; }
+*, *::before, *::after { box-sizing:border-box; }
+header { left:0 !important; right:0 !important; width:100% !important; }
+.nav-container, .wrap, .container, .page-banner .wrap { margin-left:auto !important; margin-right:auto !important; }
+.nav-container { width:100%; }
+img, video, iframe { max-width:100%; }
+@media (min-width:901px) and (max-width:1280px) {
+  header nav { display:none !important; }
+  header .mobile-toggle { display:inline-flex !important; align-items:center; justify-content:center; }
+  .nav-container { width:100% !important; max-width:1180px !important; padding-left:clamp(1rem,3vw,2rem) !important; padding-right:clamp(1rem,3vw,2rem) !important; }
+}
+</style>
+
+</head>
 <body>
 <header><div class="nav-container">
 <a href="index.html" class="logo-group"><img src="images/strantech-logo-light.png" alt=""><span class="logo-text">STRANTECH</span><span class="cage-badge">CAGE 1W2E4</span></a>
